@@ -10,18 +10,25 @@ import { FooterComponent } from './template/footer/footer.component';
 import { CreateUserComponent } from './views/create-user/create-user.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    CreateUserComponent
+    CreateUserComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule,
+    ButtonModule,
+    FormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

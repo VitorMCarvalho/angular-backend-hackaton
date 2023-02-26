@@ -1,9 +1,8 @@
 export interface User{
   id?: number,
-  name: String,
-  login: String,
-  email: String,
-  birthDate?: String,
-  creationDate?: Date,
-  updateDate?: Date
+  nome: string,
+  login: string,
+  email: string,
+  senha?:string,
+  dataNascimento?: string,
 }

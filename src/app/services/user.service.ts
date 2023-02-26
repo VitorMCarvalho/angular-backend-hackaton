@@ -1,7 +1,7 @@
 import { User } from './../models/user.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { environment } from 'src/environments/environment.development';
+//import { environment } from 'src/environments/environment.development';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private readonly URL: string = environment.URL + "/user"
+  private readonly URL: string = "http://localhost:8080/api" + "/user"
 
   constructor(private http: HttpClient){}
 
@@ -34,7 +34,7 @@ export class UserService {
   }
 
   updateUser(user: User){
-    return this.http.put(this.URL, {user})
+    return this.http.put(this.URL, JSON.stringify(user))
   }
 
   deleteUser(userId: number){
